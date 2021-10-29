@@ -9,7 +9,7 @@ def contar_ocorrencia_letras_frases(lista):
             dicio[palavra] = valor
         
         resultado = [f'"{x}" = {y}' for x,y in dicio.items()]
-    return resultado
+    return sorted(resultado)
 
 
 def contar_letras(texto):
@@ -21,5 +21,5 @@ def contar_letras(texto):
 
 if __name__ =='__main__':
     texto = 'Um forte indicador de que já há avanços de Democratização de Dados nas organizações é observar quantas pessoas tem acesso a Dados.'
-    print(contar_ocorrencia_letras_frases(texto))
-    print(contar_letras(texto))
+    print('Lista de letras e quantidade das suas repetições:\n', contar_ocorrencia_letras_frases(texto))
+    print("\nNo total são:",contar_letras(texto),' letras')
